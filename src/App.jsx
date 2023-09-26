@@ -1,13 +1,27 @@
-import React from 'react';
+import { useContext } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import NavBar from './NavBar';
+import Navbar from './NavBar';
+import Tasks from './task/Task.jsx';
+import Calendar from './calendar/Calendar.jsx';
+import Auth from './loginpage/Login&signup.jsx';
 
 function App() {
-  return (
-      <NavBar />
   
+
+  return (
+    <div>
+      <Routes>
+        <Route index element={<Auth />} />
+        <Route path="/" element={<Navbar />}>
+          <Route path="/task" element={<Tasks />} />
+          <Route path="/calendar" element={<Calendar />} />
+        </Route>
+        <Route path="/loginpage" element={<Auth />} />
+      </Routes>
+      
+    </div>
   );
 }
 
 export default App;
-

@@ -1,22 +1,27 @@
-import React, { useState } from 'react';
-import "./NavBar.css"
-import { Link, useNavigate } from "react-router-dom"
+import React from 'react';
+import { Outlet, Link } from 'react-router-dom';
+import './NavBar.css';
 
-function NavBar() {
-
+export default function Navbar() {
   return (
-    <div className='navBarContainer'>
-      <h1 id='header'>stuidy</h1>
-      <nav className='navBar'>
-        <ul>
-          <li> <Link id='link' >Home</Link></li>
-          <li><Link id='link'>Assignment Managment</Link></li>
-          <li> <Link id='link'>Calendar</Link></li>
-          <li> <Link id='link'>Profile</Link></li>
+    <div className="navBarContainer">
+      <nav className="navBar">
+        <h1 id="header">
+         stidy
+        </h1>
+        <ul className="navul">
+        <li id="link">
+        <Link to="/Task">Assignment Management</Link>
+          </li>
+          <li id="link">
+            <Link to="/calendar">Calendar</Link>
+          </li>
+          <li id="link">
+            <Link to="/loginpage">logout</Link>
+          </li>
         </ul>
       </nav>
+      <Outlet />
     </div>
-  )
+  );
 }
-
-export default NavBar;

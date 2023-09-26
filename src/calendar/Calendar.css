@@ -1,5 +1,4 @@
 
-/* Default styles for larger screens */
 * {
   margin: 0;
   padding: 0;
@@ -7,69 +6,14 @@
   font-family: 'Jost', sans-serif;
 }
 
-body {
-  background-color: #2d3233;
-}
-
 .demo-app {
+  background-color: #e9f3f5;
   display: flex;
   flex-direction: column;
-align-items: flex-start;
   align-items: center;
   gap: 5px;
 }
 
-
-.external-event-form {
-  background-color: #c8ffaa;
-  background-image: linear-gradient(to bottom, #9effdb, #5fd3c8);
-  color: rgb(5, 4, 4);
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 1;
-}
-
-#event-type {
-  display: flex;
-  flex-direction: row;
-  gap: 3px;
-}
-
-#event-title {
-  width: 12vw;
-  margin: 4px;
-}
-
-.external-event-form h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.external-event-form input[type="text"],
-.external-event-form input[type="datetime-local"] {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: none;
-  border-radius: 5px;
-}
-
-
-
-.external-event-form button {
-  background-color: #2585ab;
-  color: rgb(2, 2, 2);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.external-event-form button:hover {
-  background-color: #9fc3f5;
-}
 
 .task-count-section {
   display: flex;
@@ -77,7 +21,6 @@ align-items: flex-start;
   justify-content: center;
   background-image: linear-gradient(to bottom, #9effdb, #5fd3c8);
   color: rgb(3, 3, 3);
-  padding: 20px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -95,54 +38,53 @@ align-items: flex-start;
   flex-direction: row;
   list-style: none;
   padding: 0;
+  width: 100%;
 }
 
 .task-count-section li {
   font-size: 16px;
+  margin-left: 3vw;
+  margin-right: 3vw;
 
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
-#red{
-  background-color: rgba(255, 0, 0, 0.629);
+#red {
+  background-color: rgba(255, 0, 0, 0.513);
   border: 2px #2d3233;
-  width: 10vw;
+ 
   border-radius: 5px;
 }
 
-#blue{
-  background-color: rgba(0, 13, 255, 0.629);
+#blue {
+  background-color: rgba(0, 13, 255, 0.475);
   border: 2px #2d3233;
-  width: 10vw;
+ 
   border-radius: 5px;
 }
 
-#green{
-  background-color: rgba(21, 255, 0, 0.629);
+#green {
+  background-color: rgba(21, 255, 0, 0.496);
   border: 2px #2d3233;
-  width: 10vw;
+ 
   border-radius: 5px;
 }
 
-#orange{
-  background-color: rgba(255, 183, 0, 0.629);
+#orange {
+  background-color: rgba(255, 183, 0, 0.478);
   border: 2px #2d3233;
-  width: 10vw;
+ 
   border-radius: 5px;
 }
 
-#black{
-  background-color: rgba(7, 5, 1, 0.629);
+#black {
+  background-color: rgba(24, 22, 18, 0.528);
   border: 2px #2d3233;
-  width: 10vw;
+ 
   border-radius: 5px;
 }
-
-
 
 #graph {
-  background-image: linear-gradient(to bottom, #9effdb,#5fd3c8);
+  background-image: linear-gradient(to bottom, #9effdb, #5fd3c8);
   color: rgb(3, 3, 3);
   padding: 20px;
   border-radius: 5px;
@@ -161,8 +103,8 @@ align-items: flex-start;
   transition: 0.3s;
 }
 
-#graph h1{
-margin-bottom: 10px;
+#graph h1 {
+  margin-bottom: 10px;
 }
 
 #addli:hover {
@@ -182,10 +124,10 @@ margin-bottom: 10px;
   padding: 10px;
   border: none;
   border-radius: 5px;
-margin: 5px;
+  margin: 5px;
 }
 
-/* Styles for the calendar and events */
+
 #demo-app-main {
   background-image: linear-gradient(to bottom, #88efd6, #177d99);
   padding: 20px;
@@ -194,14 +136,14 @@ margin: 5px;
   width: 85%;
 }
 
-#main-container{
+#main-container {
   display: flex;
   flex-direction: row;
   gap: 5px;
   width: 100%;
 }
 
-/* Custom event styles */
+
 .custom-event {
   padding: 5px;
   border-radius: 5px;
@@ -216,9 +158,9 @@ margin: 5px;
   font-style: italic;
 }
 
-/* Media query for smaller screens, like phones */
+
 @media (max-width: 768px) {
-  .external-event-form{
+  .external-event-form {
     padding: 10px;
   }
 
@@ -232,27 +174,19 @@ margin: 5px;
     padding: 5px;
     font-size: 14px;
   }
-  
-  /* Additional adjustments for other elements as needed */
+  .task-count-section li {
+    font-size: 8px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  #graph {
+    display: none;
+  }
+
+  #demo-app-main{
+width: 100%;
+  }
+
 }
 
-.react-modal {
-  
-
-  background-color: white;
-  border-radius: 5px;
-  padding: 20px;
-  max-width: 400px;
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- 
-}
-
-.react-modal-overlay {
-  background-color: rgba(0, 0, 0, 0.3); 
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-}
 
