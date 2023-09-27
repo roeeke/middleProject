@@ -66,10 +66,10 @@ function Tasks() {
                 return;
             }
             console.log(taskLimit);
-console.log(localStorage.getItem('isSubscribed'));
+            console.log(localStorage.getItem('isSubscribed'));
             console.log('test');
             const newTask = {
-               id: uuidv4(),
+                id: uuidv4(),
                 name: taskName,
                 details: taskDetails,
                 deadline: taskDeadline,
@@ -223,16 +223,16 @@ console.log(localStorage.getItem('isSubscribed'));
                 <div className="form-group">
                     <h2 id='newTaskHeader'>New Task</h2>
                     <div className='TaskName'>
-                    <label htmlFor="taskName">Task Name:</label>
-                    <input
-                        type="text"
-                        id="taskName"
-                        placeholder="Enter Task Name"
-                        value={taskName}
-                        onChange={(e) => setTaskName(e.target.value)}
-                        required
-                        className="form-input"
-                    />
+                        <label htmlFor="taskName">Task Name:</label>
+                        <input
+                            type="text"
+                            id="taskName"
+                            placeholder="Enter Task Name"
+                            value={taskName}
+                            onChange={(e) => setTaskName(e.target.value)}
+                            required
+                            className="form-input"
+                        />
                     </div>
                 </div>
                 <div className="form-group">
@@ -248,16 +248,16 @@ console.log(localStorage.getItem('isSubscribed'));
                 </div>
                 <div className="form-group">
                     <div className='TaskDetails'>
-                    <label htmlFor="taskDeadline">Task Deadline:</label>
-                    <input
-                        type="date"
-                        id="taskDeadline"
-                        value={taskDeadline}
-                        onChange={(e) => setTaskDeadline(e.target.value)}
-                        required
-                        min={getCurrentDate()}
-                        className="form-input"
-                    />
+                        <label htmlFor="taskDeadline">Task Deadline:</label>
+                        <input
+                            type="date"
+                            id="taskDeadline"
+                            value={taskDeadline}
+                            onChange={(e) => setTaskDeadline(e.target.value)}
+                            required
+                            min={getCurrentDate()}
+                            className="form-input"
+                        />
                     </div>
                 </div>
                 <button type="submit" className="form-button">Add Task</button>
@@ -292,11 +292,11 @@ console.log(localStorage.getItem('isSubscribed'));
                                     .map((task, index) => (
 
                                         <Draggable
-                                        key={task.id || `default-${index}`} // Use index as the fallback key
-                                        draggableId={task.id ? task.id.toString() : `default-${index}`}
-                                        index={index}
-                                    >
-                                    
+                                            key={task.id || `default-${index}`} // Use index as the fallback key
+                                            draggableId={task.id ? task.id.toString() : `default-${index}`}
+                                            index={index}
+                                        >
+
                                             {(provided, snapshot) => (
 
                                                 <tr
@@ -374,26 +374,65 @@ console.log(localStorage.getItem('isSubscribed'));
                 <div id='modalContainer'>
                     <h2 id='subHeader'>Subscription for more features!</h2>
                     <div id='subContainer' style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                        <div className='sub' style={{ flex: 1, padding: '20px', background: 'purple', color: 'white', textAlign: 'center' }}>
+                        <div className='sub' style={{ flex: 1, padding: '20px', background: 'blue', color: 'white', textAlign: 'center' }}>
                             <h3 id='title'>Free Trial</h3>
                             <p id='details'>Get 3 days of free access</p>
                             <p style={{ color: 'white' }}>Free</p>
-                            <button onClick={openCreditCardModal}>Subscribe</button>
+                            <button onClick={openCreditCardModal}
+                                style={{
+                                    backgroundColor: 'lightblue',
+                                    margin: '5 5 5 5',
+                                    color: 'black',
+                                    border: 'none',
+                                    padding: '10px 20px',
+                                    cursor: 'pointer',
+                                    borderRadius: '5px',
+                                }}>Subscribe</button>
                         </div>
-                        <div className='sub' style={{ flex: 1, padding: '20px', background: 'purple', color: 'white', textAlign: 'center' }}>
+                        <div className='sub' style={{ flex: 1, padding: '20px', background: 'blue', color: 'white', textAlign: 'center' }}>
                             <h3 id='title'>3 Months</h3>
                             <p id='details'>Unlock premium features for 3 months</p>
                             <p style={{ color: 'white' }}>19.99$</p>
-                            <button onClick={openCreditCardModal}>Subscribe</button>
+                            <button onClick={openCreditCardModal}
+                                 style={{
+                                    backgroundColor: 'lightblue',
+                                    margin: '5 5 5 5',
+                                    color: 'black',
+                                    border: 'none',
+                                    padding: '10px 20px',
+                                    cursor: 'pointer',
+                                    borderRadius: '5px',
+                                  }}
+                                  >Subscribe</button>
                         </div>
-                        <div className='sub' style={{ flex: 1, padding: '20px', background: 'purple', color: 'white', textAlign: 'center' }}>
+                        <div className='sub' style={{ flex: 1, padding: '20px', background: 'blue', color: 'white', textAlign: 'center' }}>
                             <h3 id='title'>One Year</h3>
                             <p id='details'>Enjoy a full year of premium access</p>
                             <p style={{ color: 'white' }}>45.99$</p>
-                            <button onClick={openCreditCardModal}>Subscribe</button>
+                            <button onClick={openCreditCardModal}
+                                 style={{
+                                    backgroundColor: 'lightblue',
+                                    margin: '5 5 5 5',
+                                    color: 'black',
+                                    border: 'none',
+                                    padding: '10px 20px',
+                                    cursor: 'pointer',
+                                    borderRadius: '5px',
+                                  }}
+                                  >Subscribe</button>
                         </div>
                     </div>
-                    <button id='cancelSub' onClick={() => setIsModalOpen(false)}>Close</button>
+                    <button id='cancelSub' onClick={() => setIsModalOpen(false)}
+                         style={{
+                            backgroundColor: 'lightblue',
+                            margin: '5 5 5 5',
+                            color: 'black',
+                            border: 'none',
+                            padding: '10px 20px',
+                            cursor: 'pointer',
+                            borderRadius: '5px',
+                          }}
+                          >Close</button>
                 </div>
             </Modal>
             <Modal

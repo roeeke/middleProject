@@ -19,8 +19,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(to bottom, #9effdb, #5fd3c8);
-  color: rgb(3, 3, 3);
+  background-image: linear-gradient(to bottom, #2893eb, #1a5391);
+  color: rgb(0, 0, 0);
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -84,8 +84,8 @@
 }
 
 #graph {
-  background-image: linear-gradient(to bottom, #9effdb, #5fd3c8);
-  color: rgb(3, 3, 3);
+  background-image: linear-gradient(to bottom, #2893eb, #1a5391);
+  color: rgb(11, 9, 9);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -94,8 +94,8 @@
 }
 
 #graph button {
-  background-color: #2585ab;
-  color: rgb(2, 2, 2);
+  background-color: #05194f;
+  color: rgb(240, 237, 237);
   border: none;
   padding: 3px 10px;
   cursor: pointer;
@@ -108,7 +108,7 @@
 }
 
 #addli:hover {
-  background-color: #9fc3f5;
+  background-color: #0000a3;
 }
 
 #libutton {
@@ -129,7 +129,7 @@
 
 
 #demo-app-main {
-  background-image: linear-gradient(to bottom, #88efd6, #177d99);
+  background-image: linear-gradient(to bottom, #2893eb, #1a5391);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -175,7 +175,7 @@
     font-size: 14px;
   }
   .task-count-section li {
-    font-size: 8px;
+    font-size: 10px;
     margin-left: 2vw;
     margin-right: 2vw;
   }

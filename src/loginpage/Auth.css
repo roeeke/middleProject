@@ -7,14 +7,14 @@
     align-items: center;
     min-height: 100vh;
     font-family: 'Jost', sans-serif;
-    background: linear-gradient(to bottom, #2c3538, #356e74, #2a3b43);
+    background: linear-gradient(to bottom, #2c3538, #0c1ebcc3, #2a3b43);
 }
 .main{
     width: 350px;
     height: 500px;
     background: red;
     overflow: hidden;
-    background-color: #232222;
+    background-color: #222223;
     border-radius: 10px;
     box-shadow: 5px 20px 50px #000;
 }
@@ -57,7 +57,7 @@
     justify-content: center;
     display: block;
     color: #fff;
-    background: #50b7c9;
+    background: #2647cc;
     font-size: 1em;
     font-weight: bold;
     margin-top: 20px;
@@ -68,7 +68,7 @@
     cursor: pointer;
 }
 .signupbutton:hover{
-    background: #4feaf0;
+    background: #5b72cd;
 }
 .login{
     height: 460px;
@@ -78,7 +78,7 @@
     transition: .5s ease-in-out;
 }
 .login label{
-    color: #0b9aaa;
+    color: #071bc9;
     transform: scale(.6);
 }
 

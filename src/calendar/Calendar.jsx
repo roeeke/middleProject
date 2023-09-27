@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useRef, useEffect } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -185,7 +182,7 @@ export default function DemoApp() {
 
       <div id='main-container'>
       <div id="graph">
-          <h1>don't forget</h1>
+          <h1>Don't Forget</h1>
           <input
             type="text"
             placeholder="Enter note"
@@ -193,7 +190,7 @@ export default function DemoApp() {
             onChange={(e) => setInputText(e.target.value)}
           />
           <button id="addli" onClick={addToTextList}>
-            add
+            Add
           </button>
           <ul>
             {textList.map((item, index) => (
@@ -284,9 +281,9 @@ export default function DemoApp() {
     <button
       onClick={handleEventDelete}
       style={{
-        backgroundColor: 'blue',
+        backgroundColor: 'lightblue',
         marginBottom: '5px',
-        color: 'white',
+        color: 'black',
         border: 'none',
         padding: '10px 20px',
         cursor: 'pointer',
@@ -298,9 +295,9 @@ export default function DemoApp() {
     <button
       onClick={() => setIsDeleteModalOpen(false)}
       style={{
-        backgroundColor: 'blue',
+        backgroundColor: 'lightblue',
         margin: '5 5 5 5',
-        color: 'white',
+        color: 'black',
         border: 'none',
         padding: '10px 20px',
         cursor: 'pointer',
@@ -418,10 +415,10 @@ export default function DemoApp() {
     <button
       onClick={handleExternalEventSubmit}
       style={{
-        backgroundColor: 'blue',
+        backgroundColor: 'lightblue',
         margin: '5 5 5 5',
         marginBottom: '5px',
-        color: 'white',
+        color: 'black',
         border: 'none',
         padding: '10px 20px',
         cursor: 'pointer',
@@ -434,9 +431,9 @@ export default function DemoApp() {
     <button
       onClick={() => setIsCalendarClickModalOpen(false)}
       style={{
-        backgroundColor: 'blue',
+        backgroundColor: 'lightblue',
         margin: '5 5 5 5',
-        color: 'white',
+        color: 'black',
         border: 'none',
         padding: '10px 20px',
         cursor: 'pointer',
@@ -451,4 +448,3 @@ export default function DemoApp() {
     </div>
   );
 }
-
